@@ -38,7 +38,7 @@ The free tier is this repository: public, MIT, standalone. The paid tier is a se
 
 ## What is not here, and why
 
-A first draft carried the React Native toolkit's module list across; the second pass asked what SwiftUI and Foundation already give and kept only what is left. Cut: primitives (SwiftUI's views are the primitives), layout, state, navigation, networking, persistence, forms, lists, feedback, and localization (string catalogs and formatters). A module that wraps what the platform does well is a shallow module, and none ships here.
+The list was built by asking what SwiftUI and Foundation already give and keeping only what is left. Cut: primitives (SwiftUI's views are the primitives), layout, state, navigation, networking, persistence, forms, lists, feedback, and localization (string catalogs and formatters). A module that wraps what the platform does well is a shallow module, and none ships here.
 
 ## How each module lands
 
