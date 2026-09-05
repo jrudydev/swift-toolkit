@@ -5,9 +5,9 @@ A free, standalone SwiftUI toolkit for only what SwiftUI and Foundation do not g
 
 ## The modules 🧱
 
-Each module does one thing. The order is the order they land in: a module lands only after everything it needs. Every module on this page is proposed, for review.
+Each module does one thing. The order is the order they land in: a module lands only after everything it needs. A proposed module is on the table for review; approved means it is decided; built means its code and its tests are here.
 
-**The free tier**
+**The free tier.** Every module here is approved.
 
 1. **fixtures** — What a test needs and the platform does not give: previews as fixtures, a fake network, a fake store. XCTest and the Testing framework stay the test runners. Needs nothing.
 2. **tokens** — The design tokens as one typed value in the environment: colors, type scale, spacing, radii, motion, and the accessibility defaults. Every style reads it; dark mode and dynamic type stay the platform's. Needs nothing.
@@ -17,5 +17,15 @@ Each module does one thing. The order is the order they land in: a module lands 
 6. **analytics-sink** — The seam: the protocol an events sink satisfies. Needs nothing.
 7. **notification-channel** — The seam: the protocol a notification channel satisfies. Needs nothing.
 8. **security-policy** — The seam: the protocol a security policy satisfies; the protection product implements it. Needs nothing.
+
+**The paid tier — behind a paywall.** Each module implements one seam of the free tier or builds on it; it imports the free tier, never the reverse. Every module here is proposed, for review.
+
+1. **sdui** — Screens described by the server: a schema, a registry of view builders, a renderer over the styles. The heart of the paid tier, and the one thing the platform gives nothing for. Needs tokens, styles.
+2. **auth** — The sign-in flow over AuthenticationServices and the Keychain, filling the auth-provider seam. Needs auth-provider.
+3. **analytics** — Events as values, one adapter per vendor, filling the analytics-sink seam. Needs analytics-sink.
+4. **deep-linking** — Deferred and campaign links over the app's own universal links. Needs nothing.
+5. **notifications** — Registration and channels over UserNotifications, filling the notification-channel seam. Needs notification-channel.
+6. **security** — Pinning, device checks and the Aginuz protection product behind the security-policy seam. Needs security-policy.
+7. **testing-dsl** — A readable layer over the fixtures. Needs fixtures.
 
 _Generated page — do not hand-edit; it regenerates from the declared genome._
