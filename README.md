@@ -22,9 +22,9 @@ Each module does one thing. The order is the order they land in: a module lands 
 
 1. **sdui** — Screens described by the server: a schema, a registry of view builders, a renderer over the styles. The heart of the paid tier, and the one thing the platform gives nothing for. Needs tokens, styles.
 2. **auth** — The sign-in flow over AuthenticationServices and the Keychain, filling the auth-provider seam. Needs auth-provider.
-3. **analytics** — Events as values, one adapter per vendor, filling the analytics-sink seam. Needs analytics-sink.
+3. **analytics** — Sessions and actions as values: the session lifecycle as the app goes foreground and back, screen views, named actions with properties, user properties, an offline queue that batches and flushes, one adapter per vendor behind the sink. The pattern the founder shipped at Vessel.io, filling the analytics-sink seam. Needs analytics-sink, signposts.
 4. **deep-linking** — Deferred and campaign links over the app's own universal links. Needs nothing.
-5. **notifications** — Registration and channels over UserNotifications, filling the notification-channel seam. Needs notification-channel.
+5. **notifications** — The full-screen experience and the plumbing that gets a user to it: a takeover presenter an event can raise over anything, routing from a tapped notification straight into it, the interruption levels including the critical-alert path, the push token lifecycle, named channels. The pattern the founder shipped at Vessel.io, filling the notification-channel seam. Needs notification-channel, styles.
 6. **security** — Pinning, device checks and the Aginuz protection product behind the security-policy seam. Needs security-policy.
 7. **testing-dsl** — A readable layer over the fixtures. Needs fixtures.
 
